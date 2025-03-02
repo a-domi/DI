@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>noDItest</title>
+</head>
+
+<body>
+	<h1>DI test</h1>
+	<form method="post" action="output.html" th:action="@{output}">
+		<p>社員No.を入力してください</p>
+		<input type="text" name="number" th:field="${employeeForm.number}">
+		<p style="color:red"; th:errors="${employeeForm.number}"></p>
+		<input type="submit" value="送信">
+	</form>
+</body>
+
+</html>
